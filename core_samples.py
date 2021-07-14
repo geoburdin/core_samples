@@ -6,7 +6,6 @@ import numpy as np
 
 def contours(path_to_image, subfolder):
     try:
-
         os.mkdir('results/'+subfolder)
     except Exception as e:
         print(e)
@@ -62,7 +61,7 @@ except:
 filePaths = glob.glob(folderName + "/*.JPG") #search all JPG in the folder
 
 subfolder = 0
-os.mkdir('results/')
+
 for filePath in filePaths:
     contours(filePath, str(subfolder))
     subfolder = subfolder+1
